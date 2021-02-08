@@ -10,10 +10,14 @@ public class App {
 	public static void main(String[] args) {
 		Pessoa ana =new Pessoa();
 		ana.setNome("Ana");
-		ana.setSexo('F');
-		ana.setPeso(55);
+//		ana.setSexo('F');
+		ana.setPeso(70);
 		ana.setAltura(1.73);
-//		ana.setDataNascimento(LocalDate.of(2001, 7, 7));
+		ana.setDataNascimento(LocalDate.of(2004, 3, 26));
+		System.out.println("Nome:"+ana.getNome());
+		System.out.println("Idade:" + ana.getIdade());
+		System.out.println("Imc:"+ ana.getImc());
+		System.out.println("Imc:"+ ana.getStatusImc());
 //		ana.setNivelDeAtividade(NivelDeAtividade.MODERADO);
 		
 		

@@ -1,0 +1,17 @@
+package br.com.academia.model;
+
+import br.com.academia.model.Pessoa;
+
+public class NivelDeAtividade {
+
+//	public double getNcd() {
+//		double ncd =0;
+//		if (this.getSexo == 'M') {
+//		
+//		}
+//		return ncd;
+//	}
+	
+	
+	
+}
