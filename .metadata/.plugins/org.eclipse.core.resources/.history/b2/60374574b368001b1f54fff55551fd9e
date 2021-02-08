@@ -1,0 +1,45 @@
+package br.com.academia;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import br.com.academia.model.Pessoa;
+
+public class App {
+
+	public static void main(String[] args) {
+		Pessoa ana =new Pessoa();
+		ana.setNome("Ana");
+		ana.setSexo('F');
+		ana.setPeso(55);
+		ana.setAltura(1.73);
+		ana.setDataNascimento (LocalDate.of(2002, 1, 6));
+		ana.setNivelDeAtividade(NivelDeAtividade.MODERADO);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+}
