@@ -1,5 +1,8 @@
 package br.com.academia.model;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 public class Pessoa {
 	
 	private String nome;
@@ -7,6 +10,7 @@ public class Pessoa {
 	private double altura;
 	private char sexo;
 	private int nivelDeAtividade;
+	private LocalDate dataNascimento;
 
 
 	
@@ -42,14 +46,12 @@ public class Pessoa {
 	
 	
 	
-	
-	
 	//**set e get sexo
 	public void setSexo(char sexo) {
 		this.sexo = sexo;
 	}
-	public char getSexo() {
-		return this.sexo;
+	public void getSexo(char sexo) {
+		this.sexo = sexo;
 	}
 	
 	
@@ -61,7 +63,65 @@ public class Pessoa {
 	public int getNivelDeAtividade() {
 		return this.sexo;
 	}
-
+	
+	
+	//** Data do nascimento
+	public void dataNascimento() {
+		this.dataNascimento = dataNascimento;
+	}
+	public LocalDate getDataNascimento() {
+		return dataNascimento;
+	}
+//////////****************
+	
+	public int getIdade() {
+		LocalDate hoje = LocalDate.now();
+		Period period = Period.between(this.dataNascimento, hoje);
+		
+		
+		return period.getYears();
+		}
+////////////////******* imc ********
+	public double getImc() {
+		return this.peso / Math.pow(this.altura, 2);
+	}
+	
+	//***************
+	
+	public String getStatusImc() {
+		
+		if (this.getImc() < 18.5) {
+			return "Abaixo do Peso";
+		}else if (this.getImc)
+//		else {
+//			if(this.getImc() >= 18.5 && this.getImc() < 25) {
+//				return "Peso Normal";
+//			}else {
+//			if(this.getImc() >=25 && this.getImc() < 30) {
+//				return "Acima do peso";
+//			}
+//		}
+//			}
+//		
+//	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 
 }
