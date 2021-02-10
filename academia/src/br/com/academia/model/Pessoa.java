@@ -85,6 +85,25 @@ public class Pessoa {
 		double ncd =0;
 		if (this.sexo == 'M') {
 		
+			if (this.getIdade() >= 18 && this.getIdade() < 31 ) {
+			ncd = 15.3 * this.peso + 679;
+			} else if (this.getIdade() >= 31 && this.getIdade() <= 60 ) {
+			ncd = 11.6 * this.peso + 879;
+			} else {
+			ncd = 13.5 * this.peso + 487;
+			}
+
+			// ATIVIDADE FISICA
+			if (this.nivelDeAtividade == NivelDeAtividade.LEVE) {
+			ncd *= 1.5;
+			}
+			if (this.nivelDeAtividade == NivelDeAtividade.MODERADO ) {
+			ncd *= 1.8;
+			}
+			if (this.nivelDeAtividade == NivelDeAtividade.INTENSO ) {
+			ncd *= 2.1;
+			}
+
 		}
 		return ncd;
 	}
